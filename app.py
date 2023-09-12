@@ -1,21 +1,30 @@
 from graphviz import Digraph
 
-dot = Digraph(comment='The Round Table')
+dot = Digraph(comment='General ABF')
 
-dot.node('A', 'King Arthur')
-dot.node('B', 'Sir Bedevere')
-dot.node('L', 'Sir Lancet')
+dot.node('A', 'General ABF')
+dot.node('B', 'Human Trafficking ABF')
+dot.node('C', 'Statistics ABF')
+dot.node('D', 'GIS ABF')
+dot.node('E', 'Tool Creator ABF')
 
-dot.edges(['AB', 'AL'])
-dot.edge('B', 'L', constraint='false')
+dot.edge('A', 'B')
+dot.edges(['BC', 'BD'])
+dot.edges(['CD', 'CE'])
+dot.edge('D','E')
+
+dot.edge_attr["dir"] = "both"
+
 
 print(dot.source)
-dot.render('round-table.gv', view=True)
+dot.view()
+# print(dot.source)
+# dot.render('ABF_view.gv', view=True)
 
-w = Digraph('wide')
+# w = Digraph('wide')
 
-w.edges(('0', str(i)) for i in range(1, 10))
-w.view()
+# w.edges(('0', str(i)) for i in range(1, 10))
+# w.view()
 
-u = w.unflatten(stagger=3)
-u.view()
+# u = w.unflatten(stagger=3)
+# u.view()

@@ -1,0 +1,15 @@
+// General ABF
+digraph {
+	edge [dir=both]
+	A [label="General ABF"]
+	B [label="Human Trafficking ABF"]
+	C [label="Statistics ABF"]
+	D [label="GIS ABF"]
+	E [label="Tool Creator ABF"]
+	A -> B
+	B -> C
+	B -> D
+	C -> D
+	C -> E
+	D -> E
+}

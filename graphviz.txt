@@ -1,0 +1,4 @@
+digraph {
+    a [label="Node A"]
+    a -> b
+}
